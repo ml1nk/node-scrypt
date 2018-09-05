@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [6.1.2] - 2018-09-05
+### Fixed
+- Fix missing folder in npm package
+
+
 ## [6.1.1] - 2018-06-20
 ### Fixed
 - Fix MS Windows Compatibility
