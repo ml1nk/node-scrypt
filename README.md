@@ -70,6 +70,9 @@ More information can be found here:
 # Installation Instructions
 
 ## Pre-Requisistes
+AES_ENCRYPT must be available
+ * Ubuntu - `apt-get install libssl-dev`
+ 
 ### Windows
 
  * [Node-Gyp](https://github.com/TooTallNate/node-gyp) for Windows:
