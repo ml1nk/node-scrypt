@@ -262,10 +262,10 @@ var scrypt = require("@mlink/scrypt");
 var salt = Buffer.from("NaCl");
 
 //Synchronous
-var result = scrypt.hashSync("password", {"N":1024,"r":8,"p":16}, 64, salt);
+var result = scrypt.hashSync("password", {"N":10,"r":8,"p":16}, 64, salt);
 console.log(result.toString("hex"));
 
-scrypt.hash("password", {"N":1024,"r":8,"p":16},64,salt, function(err, result) {
+scrypt.hash("password", {"N":10,"r":8,"p":16},64,salt, function(err, result) {
   console.log(result.toString("hex"));
 });
 ```
@@ -278,11 +278,11 @@ var key = Buffer.from("pleaseletmein");
 var salt = Buffer.from("SodiumChloride");
 
 //Synchronous
-var result = scrypt.hashSync(key,{"N":16384,"r":8,"p":1},64,salt);
+var result = scrypt.hashSync(key,{"N":14,"r":8,"p":1},64,salt);
 console.log(result.toString("hex"));
 
 //Asynchronous
-scrypt.hash(key, {"N":16384,"r":8,"p":1}, 64, salt, function(err, result) {
+scrypt.hash(key, {"N":14,"r":8,"p":1}, 64, salt, function(err, result) {
   console.log(result.toString("hex"));
 });
 ```
@@ -294,11 +294,11 @@ Note: This test vector is very taxing in terms of resources.
 var scrypt = require("@mlink/scrypt");
 
 //Synchronous
-var result = scrypt.hashSync("pleaseletmein",{"N":1048576,"r":8,"p":1},64,"SodiumChloride");
+var result = scrypt.hashSync("pleaseletmein",{"N":20,"r":8,"p":1},64,"SodiumChloride");
 console.log(result.toString("hex"));
 
 //Asynchronous
-scrypt.hash("pleaseletmein", {"N":1048576,"r":8,"p":1},64,"SodiumChloride", function(err, result) {
+scrypt.hash("pleaseletmein", {"N":20,"r":8,"p":1},64,"SodiumChloride", function(err, result) {
   console.log(result.toString("hex"));
 });
 ```
